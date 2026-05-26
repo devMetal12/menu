@@ -2,44 +2,90 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <title>Menú</title>
-
-  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Menu Folder Tabs</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
-  <main class="container">
+  <div class="menu-wrapper">
 
-    <div class="logo">
-      <h1>FÉNIX</h1>
-      <p>Selecciona un menú</p>
-    </div>
+    <!-- HERO -->
+    <section class="hero">
+      <h1>MENÚ</h1>
+      <p>
+        DEL CALOR DEL TOSTADOR<br>
+        A LA PRECISIÓN DE LA COCINA.<br>
+        ALIMENTOS CON HONESTIDAD.
+      </p>
+      <div class="members">Members only</div>
+    </section>
 
-    <section class="folders">
+    <!-- FOLDER TABS -->
+    <section class="folder-tabs">
 
-      <a href="comida.html" class="folder">
-        <div class="folder-top"></div>
+      <!-- TAB BUTTONS -->
+      <div class="tab-buttons" role="tablist" aria-label="Secciones del menú">
 
-        <div class="folder-body">
-          <span class="folder-icon">🍽️</span>
-          <h2>Comida</h2>
+        <button class="folder-tab active" data-tab="bebidas" role="tab" aria-selected="true" aria-controls="bebidas" style="--tab-color:#e42b2b;">
+          <span class="folder-top">
+            BEBIDAS
+          </span>
+        </button>
+
+        <button class="folder-tab" data-tab="comida" role="tab" aria-selected="false" aria-controls="comida" style="--tab-color:#e07d50;">
+          <span class="folder-top">
+            COMIDAS
+          </span>
+        </button>
+
+        <button class="folder-tab" data-tab="postres" role="tab" aria-selected="false" aria-controls="postres" style="--tab-color:#e3c4c4;">
+          <span class="folder-top">
+            EXTRA
+          </span>
+        </button>
+
+      </div>
+
+      <!-- CONTENT -->
+      <div class="tab-content">
+
+        <!-- BEBIDAS -->
+        <div class="content-panel active" id="bebidas" role="tabpanel">
+          <h2>BEBIDAS</h2>
+          <ul>
+            <li><span>Espresso</span><span>Q25</span></li>
+            <li><span>Cold Brew</span><span>Q35</span></li>
+            <li><span>Matcha Latte</span><span>Q42</span></li>
+          </ul>
         </div>
-      </a>
 
-      <a href="bebidas.html" class="folder">
-        <div class="folder-top"></div>
-
-        <div class="folder-body">
-          <span class="folder-icon">🍸</span>
-          <h2>Bebidas</h2>
+        <!-- COMIDA -->
+        <div class="content-panel" id="comida" role="tabpanel">
+          <h2>COMIDA</h2>
+          <ul>
+            <li><span>Sandwich Roast Beef</span><span>Q65</span></li>
+            <li><span>Croissant Jamón</span><span>Q42</span></li>
+            <li><span>French Toast</span><span>Q58</span></li>
+          </ul>
         </div>
-      </a>
+
+        <!-- POSTRES -->
+        <div class="content-panel" id="postres" role="tabpanel">
+          <h2>POSTRES</h2>
+          <ul>
+            <li><span>Cheesecake</span><span>Q38</span></li>
+            <li><span>Tiramisú</span><span>Q45</span></li>
+            <li><span>Brownie</span><span>Q30</span></li>
+          </ul>
+        </div>
+
+      </div>
 
     </section>
 
-  </main>
+  </div>
 
+  <script src="script.js"></script>
 </body>
 </html>
