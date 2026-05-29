@@ -4,6 +4,24 @@
   padding: 0;
 }
 
+@font-face {
+font-family:"nitti-typewriter-normal";
+src:url("https://use.typekit.net/af/32ce9e/00000000000000007735f7df/31/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff2"),url("https://use.typekit.net/af/32ce9e/00000000000000007735f7df/31/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff"),url("https://use.typekit.net/af/32ce9e/00000000000000007735f7df/31/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("opentype");
+font-display:auto;font-style:normal;font-weight:400;font-stretch:normal;
+}
+
+@font-face {
+font-family:"nitti-typewriter-underlined";
+src:url("https://use.typekit.net/af/0d6bd2/00000000000000007735f7e1/31/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3") format("woff2"),url("https://use.typekit.net/af/0d6bd2/00000000000000007735f7e1/31/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3") format("woff"),url("https://use.typekit.net/af/0d6bd2/00000000000000007735f7e1/31/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3") format("opentype");
+font-display:auto;font-style:normal;font-weight:500;font-stretch:normal;
+}
+
+@font-face {
+font-family:"p22-typewriter";
+src:url("https://use.typekit.net/af/46f708/000000000000000077372206/31/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff2"),url("https://use.typekit.net/af/46f708/000000000000000077372206/31/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff"),url("https://use.typekit.net/af/46f708/000000000000000077372206/31/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("opentype");
+font-display:auto;font-style:normal;font-weight:400;font-stretch:normal;
+}
+
 body {
   background: #e8e1d1;
   min-height: 100vh;
@@ -76,6 +94,8 @@ body {
   height: 32px;
   min-width: 90px;
   text-align: center;
+
+  
   
 
   /* Folder tab shape: rounded on top only */
@@ -103,6 +123,8 @@ body {
 
   outline: none;
   transition: background 0.12s, color 0.12s, height 0.1s;
+
+  font-family: "p22-typewriter", monospace;
 }
 
 /* Active tab: taller, same bg as panel, bottom border erased */
@@ -187,7 +209,7 @@ body {
 /* ─── CONTENT PANELS ──────────────────────────────── */
 .content-panel {
   display: none;
-  
+  font-family: "p22-typewriter", monospace;
 }
 
 .content-panel.active {
@@ -196,13 +218,21 @@ body {
 
 .content-panel h2 {
 
-  font-size: 0.62rem;
+  font-size: 2rem;
   letter-spacing: 0.2em;
   font-weight: 500;
   color: var(--active-text-color);
-  margin-bottom: 1.3rem;
+  /* margin-bottom: 1.3rem;
   padding-bottom: 0.8rem;
-  border-bottom: 0.5px solid var(--active-text-color);
+  border-bottom: 0.5px solid var(--active-text-color); */
+
+  font-family: "nitti-typewriter-underlined", monospace;
+}
+
+.content-panel h3 {
+  font-family: "nitti-typewriter-normal", monospace;
+  border-bottom: 0px solid var(--active-text-color);
+  color: var(--active-text-color);  
 }
 
 .content-panel ul {
@@ -238,3 +268,42 @@ body {
   font-variant-numeric: tabular-nums;
   white-space: nowrap;
 } */
+
+
+.menu-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-item {
+  padding: 0.85rem 0;
+  border-bottom: 0.5px solid var(--active-text-color);
+}
+
+.menu-item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+}
+
+.menu-item-header h3 {
+  margin: 0;
+  font-family: "p22-typewriter", monospace;
+  color: var(--active-text-color);
+}
+
+.price {
+  white-space: nowrap;
+  color: var(--active-text-color);
+  font-family:Arial, Helvetica, sans-serif;
+}
+
+.menu-description {
+  margin-top: 0.35rem;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: var(--active-text-color);
+  opacity: 0.85;
+  font-family: "nitti-typewriter-normal", monospace;
+}
