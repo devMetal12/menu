@@ -115,6 +115,28 @@ body {
   transform: translateY(15);
 }
 
+.clip {
+
+  position: absolute;
+
+  width: 72px;
+
+  top: 100px;
+  left: 18px;
+
+  z-index: 20;
+
+  transform:
+    rotate(-18deg);
+
+  filter:
+    drop-shadow(0 4px 6px rgba(0,0,0,0.35));
+
+  pointer-events: none;
+
+  opacity: 0.95;
+}
+
 /* This pseudo-element covers the bottom border of the active tab,
    visually merging it with the panel below */
 .folder-tab.active::after {
@@ -157,6 +179,8 @@ body {
   border: 0px solid #b8b4ae;
   border-radius: 0 6px 6px 6px;
 
+  min-height: 100%;
+
   padding: 2rem 2.2rem;
 }
 
@@ -175,10 +199,10 @@ body {
   font-size: 0.62rem;
   letter-spacing: 0.2em;
   font-weight: 500;
-  color: #ffffff;
+  color: var(--active-text-color);
   margin-bottom: 1.3rem;
   padding-bottom: 0.8rem;
-  border-bottom: 0.5px solid #dedad4;
+  border-bottom: 0.5px solid var(--active-text-color);
 }
 
 .content-panel ul {
@@ -190,25 +214,27 @@ body {
   justify-content: space-between;
   align-items: baseline;
   padding: 0.65rem 0;
-  border-bottom: 0.5px solid #edeae6;
+  border-bottom: 0.5px solid var(--active-text-color);
   gap: 1rem;
+
+  color: var(--active-text-color)
 }
 
-.content-panel ul li:last-child {
+/* .content-panel ul li:last-child {
   border-bottom: none;
 }
 
 .content-panel ul li span:first-child {
   font-size: 0.95rem;
-  color: #1a1815;
+  color: #ffffff;
 
   font-weight: 400;
 }
 
 .content-panel ul li span:last-child {
   font-size: 0.82rem;
-  color: #7a7670;
+  color: #ffffff;
 
   font-variant-numeric: tabular-nums;
   white-space: nowrap;
-}
+} */
