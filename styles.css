@@ -105,9 +105,9 @@ body {
 
   /* Inactive: slightly darker bg, looks "behind" */
   /*background: var(--tab-color);*/
-  background-image:
-    url('https://www.creativity103.com/collections/Paper/rippled_card.jpg'); 
+  background-image: var(--tab-texture);
   background-color: var(--tab-color);
+  color: var(--text-color);
   background-size: cover;
   background-position: center;
 
@@ -118,7 +118,6 @@ body {
     transform 0.2s ease,
     filter 0.3s ease;
 
-  color: #ffffff;
   font-weight: bolder;
 
   outline: none;
@@ -130,8 +129,7 @@ body {
 /* Active tab: taller, same bg as panel, bottom border erased */
 .folder-tab.active {
   /* background: var(--active-color); */
-  color: #ffffff;
-  height: 50px;
+  height: 60px;
   z-index: 3;
   border-color: #b8b4ae;
   transform: translateY(15);
@@ -184,10 +182,9 @@ body {
 
 /* ─── PANEL CONTAINER ─────────────────────────────── */
 .tab-content {
-  background-image:
-    url('https://www.creativity103.com/collections/Paper/rippled_card.jpg');
-
-     background-color: var(--active-color);
+  background-image: var(--content-texture);
+  background-color: var(--content-color);
+  color: var(--content-text-color);
 
   background-size: cover;
   background-position: center;
