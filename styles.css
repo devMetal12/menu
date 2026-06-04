@@ -48,6 +48,7 @@ body {
   letter-spacing: 0.22em;
   color: #1a1815;
   margin-bottom: 1rem;
+  font-family: "itc-american-typewriter";
 }
 
 .hero p {
@@ -55,7 +56,7 @@ body {
   letter-spacing: 0.14em;
   color: #7a7670;
   line-height: 2;
-
+  font-family: "nitti-typewriter-normal";
 }
 
 .members {
@@ -67,6 +68,7 @@ body {
   border: 0.5px solid #c8c4be;
   padding: 4px 14px;
   border-radius: 2px;
+  font-family: "nitti-typewriter-normal";
 }
 
 /* ─── FOLDER TABS ─────────────────────────────────── */
