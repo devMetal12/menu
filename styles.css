@@ -78,6 +78,7 @@ body {
 .tab-buttons {
   display: flex;
   align-items: flex-end;
+  justify-content: space-between;
   gap: 3px;
   position: relative;
   z-index: 2;
@@ -196,7 +197,7 @@ body {
     filter 0.1s ease;
 
   border: 0px solid #b8b4ae;
-  border-radius: 0 6px 6px 6px;
+  border-radius: 0 0px 6px 6px;
 
   min-height: 100%;
 
