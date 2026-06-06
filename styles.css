@@ -29,6 +29,7 @@ body {
   align-items: flex-start;
   justify-content: center;
   padding: 3rem 1rem;
+  overflow-x: hidden;
 }
 
 /* ─── WRAPPER ─────────────────────────────────────── */
@@ -203,6 +204,8 @@ body {
 
   min-height: 100%;
 
+  overflow-x: hidden;
+
   padding: 2rem 2.2rem;
 }
 
@@ -211,17 +214,18 @@ body {
 
   position: absolute;
 
-  right: 20px;
-  bottom: 20px;
+  top: 45px;
+  right: -250px;
+  overflow-x: hidden;
 
-  width: 250px;
-  height: 250px;
+  width: 450px;
+  height: 450px;
 
   background-image: url("./bg/SECRET_PNG.png");
   background-repeat: no-repeat;
   background-size: contain;
 
-  opacity: 0.15;
+  opacity: 1;
 
   pointer-events: none;
 }
