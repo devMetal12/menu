@@ -217,7 +217,7 @@ body {
   width: 250px;
   height: 250px;
 
-  background-image: url("images.png");
+  background-image: url("./bg/SECRET_PNG.png");
   background-repeat: no-repeat;
   background-size: contain;
 
