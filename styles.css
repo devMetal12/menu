@@ -206,6 +206,26 @@ body {
   padding: 2rem 2.2rem;
 }
 
+.tab-content::before {
+  content: "";
+
+  position: absolute;
+
+  right: 20px;
+  bottom: 20px;
+
+  width: 250px;
+  height: 250px;
+
+  background-image: url("images.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  opacity: 0.15;
+
+  pointer-events: none;
+}
+
 /* ─── CONTENT PANELS ──────────────────────────────── */
 .content-panel {
   display: none;
